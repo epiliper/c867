@@ -166,7 +166,6 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram){
 }
 
 Roster::~Roster(){
-	cout << "DESTRUCTOR: Roster deleted!" << endl;
 }
 
 

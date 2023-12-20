@@ -5,13 +5,14 @@
 
 int main() {
 	
-	// printing out my Student details
-	cout << "My student details:" << endl;
-	Student* me = new Student("A5", "Eli", "Piliper", "peli@wgu.edu", 21, 31, 21, 52, SOFTWARE);
-
-	me -> print();
-
+	//printing out my student details
+	cout << "Course: C867 (Scripting and Programming Applications"<< endl;
+	cout << "Programming language: C++" << endl;
+	cout << "Student ID: 011692066" << endl;
+	cout << "Name: Eli Piliper" << endl;
+	
 	cout << endl;
+
 
 	//creating classRoster, adding Students
 	Roster classRoster;
@@ -23,10 +24,15 @@ int main() {
 		"A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY", 
 		"A5,Eli,Piliper,peli@wgu.edu,21,31,21,52,SOFTWARE"
 	};
+	
 
 	classRoster.populateRoster(studentData);
 
-	/* classRoster.printAll(); */
+	classRoster.printAll();
+	cout << endl;
+
+	classRoster.printInvalidEmails();
+	cout << endl;
 
 	cout << "Average days in course by Student ID:" << endl;
 
@@ -42,8 +48,6 @@ int main() {
 
 	//which students have invalid emails? 
 	
-	classRoster.printInvalidEmails();
-	cout << endl;
 
 	cout << "List of students seeking software degree:" << endl;
 	classRoster.printByDegreeProgram(SOFTWARE);
@@ -62,8 +66,11 @@ int main() {
 	cout << endl;
 
 
+	//code implementing destructor
+	classRoster.~Roster();
 
-	//destructor was automatically implemented, as classRoster was initialized without "new" keyword
+
+
 
 
 
