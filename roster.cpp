@@ -166,7 +166,14 @@ void Roster::printByDegreeProgram(DegreeProgram degreeProgram){
 }
 
 Roster::~Roster(){
-}
+	for (int i = 0; i < 5; i++){
+		delete classRosterArray[i];
+		}
+
+	cout << "Destructor called!" << endl;
+	}
+
+
 
 
 

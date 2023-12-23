@@ -67,7 +67,6 @@ int main() {
 
 
 	//code implementing destructor
-	classRoster.~Roster();
 
 
 
